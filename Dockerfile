@@ -109,6 +109,7 @@ ENV MANPATH     /opt/ansible/docs/man:$MANPATH
 
 
 COPY ansible-playbook-wrapper /usr/local/bin/
+RUN chmod +x /usr/local/bin/ansible-playbook-wrapper
 
 ONBUILD  WORKDIR /tmp
 ONBUILD  COPY  .  /tmp
